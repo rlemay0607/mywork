@@ -18,6 +18,10 @@ class Meeting extends Model
     {
         return $this->belongsTo('App\Company');
     }
+    public function notess()
+    {
+        return $this->hasMany('App\Note');
+    }
     protected $casts = [
         'date' => 'date',
     ];
