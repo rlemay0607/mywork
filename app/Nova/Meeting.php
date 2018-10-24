@@ -56,6 +56,7 @@ class Meeting extends Resource
                 ->sortable()
                 ->rules('required'),
             HasMany::make('Notes'),
+            HasMany::make('Todos'),
 
 
         ];
