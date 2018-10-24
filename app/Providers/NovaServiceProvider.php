@@ -69,6 +69,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             new \Cloudstudio\ResourceGenerator\ResourceGenerator(),
+            new \Cendekia\SettingTool\SettingTool,
         ];
     }
 
