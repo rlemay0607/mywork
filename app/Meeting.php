@@ -22,6 +22,10 @@ class Meeting extends Model
     {
         return $this->hasMany('App\Note');
     }
+    public function todos()
+    {
+        return $this->hasMany('App\Todo');
+    }
     protected $casts = [
         'date' => 'date',
     ];
