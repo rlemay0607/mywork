@@ -55,7 +55,7 @@ class Meeting extends Resource
             Trix::make('Details')
                 ->sortable()
                 ->rules('required'),
-          
+
 
         ];
     }

@@ -70,6 +70,7 @@ class Company extends Resource
 			->prunable()
 	 ,
             HasMany::make('Users'),
+            HasMany::make('Meetings'),
                                                                                             ];
     }
 
