@@ -21,4 +21,8 @@ class Company extends Model
     {
         return $this->hasMany('App\User');
     }
+    public function meetings()
+    {
+        return $this->hasMany('App\Meeting');
+    }
 }
