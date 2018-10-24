@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\DateTime;
 
 
@@ -68,6 +69,7 @@ class Company extends Resource
 ->disk('public')
 			->prunable()
 	 ,
+            HasMany::make('Users'),
                                                                                             ];
     }
 
