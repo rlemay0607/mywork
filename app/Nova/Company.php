@@ -43,9 +43,8 @@ class Company extends Resource
     public function fields(Request $request)
     {
         return [
-                                                                            Text::make( 'Name',  'name')
-->rules('required')
-->sortable()
+            Text::make( 'Name',  'name')
+            ->rules('required')->sortable()
 ,
                                                                 Text::make( 'Address',  'address')
 ->rules('required')

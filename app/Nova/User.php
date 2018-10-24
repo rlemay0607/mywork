@@ -44,7 +44,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-            Gravatar::make(),
+            Avatar::make('Avatar')->disk('public')->prunable(),
 
             Text::make('Name')
                 ->sortable()
