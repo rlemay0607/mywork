@@ -55,9 +55,7 @@ class Meeting extends Resource
             Trix::make('Details')
                 ->sortable()
                 ->rules('required'),
-            HasMany::make('Notes'),
-            HasMany::make('Todos'),
-            HasMany::make('Mfiles'),
+          
 
         ];
     }
