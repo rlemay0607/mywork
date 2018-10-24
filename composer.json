@@ -8,6 +8,7 @@
         "php": "^7.1.3",
         "cloudstudio/resource-generator": "^1.0",
         "fideloper/proxy": "^4.0",
+        "gregoriohc/laravel-nova-theme-responsive": "^0.6.1",
         "laravel/framework": "5.7.*",
         "laravel/nova": "*",
         "laravel/tinker": "^1.0"
