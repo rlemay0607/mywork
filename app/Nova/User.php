@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
 
 use Laravel\Nova\Fields\Password;
 
@@ -46,6 +47,7 @@ class User extends Resource
             ID::make()->sortable(),
 
             Avatar::make('Avatar')->disk('public')->prunable(),
+            BelongsTo::make('Company')->rules('required'),
 
             Text::make('Name')
                 ->sortable()
