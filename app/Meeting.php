@@ -18,7 +18,7 @@ class Meeting extends Model
     {
         return $this->belongsTo('App\Company');
     }
-    public function notess()
+    public function notes()
     {
         return $this->hasMany('App\Note');
     }
