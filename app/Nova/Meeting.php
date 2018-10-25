@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
+use Froala\NovaFroalaField\Froala;
 
 
 
@@ -54,9 +55,7 @@ class Meeting extends Resource
             BelongsTo::make('Company')->rules('required')->searchable(),
             Date::make('Date')->rules('required'),
 
-            Trix::make('Details')
-                ->sortable()
-                ->rules('required')->withFiles('public'),
+            Froala::make('Details')->withFiles('public')->showOnIndex(),
             HasMany::make('Notes'),
             HasMany::make('Todos'),
 

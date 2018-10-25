@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\BelongsTo;
+use Froala\NovaFroalaField\Froala;
 
 
 
@@ -51,10 +52,8 @@ class Todo extends Resource
                 ->rules('required')
                 ->sortable()->asHtml()
             ,
-            Trix::make( 'Description',  'description')
-                ->rules('required')
-                ->sortable()
-            ,
+            Froala::make('Description')->withFiles('public')->showOnIndex(),
+            
             Select::make( 'Status',  'status')
                 ->rules('required')
                 ->sortable()
