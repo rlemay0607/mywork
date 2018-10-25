@@ -45,7 +45,7 @@ class Note extends Resource
         return [
             ID::make()->sortable(),
             BelongsTo::make('Meeting')->rules('required')->searchable(),
-            Froala::make('Note')->withFiles('public'),
+            Froala::make('Note')->withFiles('public')->showOnIndex(),
 
         ];
     }
