@@ -47,6 +47,12 @@ class Company extends Resource
             Text::make( 'Name',  'name')
             ->rules('required')->sortable()
 ,
+            Avatar::make( 'Logo',  'logo')
+                ->rules('required')
+                ->sortable()
+                ->disk('public')
+                ->prunable()
+            ,
                                                                 Text::make( 'Address',  'address')
 ->rules('required')
 ->sortable()
@@ -63,12 +69,7 @@ class Company extends Resource
 ->rules('required')
 ->sortable()
 ,
-                                                                Avatar::make( 'Logo',  'logo')
-->rules('required')
-->sortable()
-->disk('public')
-			->prunable()
-	 ,
+
             HasMany::make('Users'),
             HasMany::make('Meetings'),
                                                                                             ];

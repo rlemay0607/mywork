@@ -53,7 +53,7 @@ class Todo extends Resource
                 ->sortable()->asHtml()
             ,
             Froala::make('Description')->withFiles('public')->showOnIndex(),
-            
+
             Select::make( 'Status',  'status')
                 ->rules('required')
                 ->sortable()
