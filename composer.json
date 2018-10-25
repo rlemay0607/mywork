@@ -9,6 +9,7 @@
         "cendekia/nova-setting-tool": "^0.0.2",
         "cloudstudio/resource-generator": "^1.0",
         "fideloper/proxy": "^4.0",
+        "froala/nova-froala-field": "^1.0",
         "gregoriohc/laravel-nova-theme-responsive": "^0.6.1",
         "laravel/framework": "5.7.*",
         "laravel/nova": "*",

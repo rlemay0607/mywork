@@ -11,6 +11,9 @@ class Todo extends Model
      * @var  string
      */
     protected $table = 'todos';
+    protected $fillable = [
+        'meeting_id', 'short_description', 'status', 'description', 'notes',
+    ];
 
     protected $casts = [
         'created_at' => 'datetime',

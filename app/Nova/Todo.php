@@ -5,10 +5,12 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\DateTime;
+
+
 
 
 class Todo extends Resource
@@ -47,7 +49,7 @@ class Todo extends Resource
         return [
             Text::make( 'Short Description',  'short_description')
                 ->rules('required')
-                ->sortable()
+                ->sortable()->asHtml()
             ,
             Trix::make( 'Description',  'description')
                 ->rules('required')
@@ -57,13 +59,14 @@ class Todo extends Resource
                 ->rules('required')
                 ->sortable()
                 ->options([
-                    'new' => 'New',
-                    'wip' => 'Work In Progress',
-                    'onhold' => 'On-Hold',
-                    'closed' => 'Closed',
-                    'cancell' => 'Cancell',
+                    'New' => 'New',
+                    'Work In Progress' => 'Work In Progress',
+                    'On-Hold' => 'On-Hold',
+                    'Closed' => 'Closed',
+                    'Cancell' => 'Cancell',
                 ])
             ,
+            Textarea::make('Notes'),
             BelongsTo::make('Meeting')
                 ->rules('required')
                 ->searchable()
@@ -113,6 +116,8 @@ class Todo extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new Actions\UpdateTodoStatus(),
+        ];
     }
 }

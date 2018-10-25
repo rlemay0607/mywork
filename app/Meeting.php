@@ -12,7 +12,7 @@ class Meeting extends Model
     use Actionable;
 
     protected $fillable = [
-        'name', 'details', 'date', 'company_id',
+        'name', 'details', 'date', 'company_id', 'title'
     ];
     public function company()
     {

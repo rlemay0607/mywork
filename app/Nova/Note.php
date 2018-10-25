@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Froala\NovaFroalaField\Froala;
 
 class Note extends Resource
 {
@@ -44,7 +45,7 @@ class Note extends Resource
         return [
             ID::make()->sortable(),
             BelongsTo::make('Meeting')->rules('required')->searchable(),
-            Trix::make('Note')->sortable()->rules('required'),
+            Froala::make('Note')->withFiles('public'),
 
         ];
     }
@@ -90,6 +91,8 @@ class Note extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new Actions\CreateToDo(),
+        ];
     }
 }

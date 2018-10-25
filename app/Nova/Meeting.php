@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
 
 
+
 class Meeting extends Resource
 {
     /**
@@ -52,9 +53,10 @@ class Meeting extends Resource
                 ->rules('required', 'max:255'),
             BelongsTo::make('Company')->rules('required')->searchable(),
             Date::make('Date')->rules('required'),
+
             Trix::make('Details')
                 ->sortable()
-                ->rules('required'),
+                ->rules('required')->withFiles('public'),
             HasMany::make('Notes'),
             HasMany::make('Todos'),
 
