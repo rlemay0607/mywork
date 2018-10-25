@@ -48,27 +48,26 @@ class Company extends Resource
             ->rules('required')->sortable()
 ,
             Avatar::make( 'Logo',  'logo')
-                ->rules('required')
                 ->sortable()
                 ->disk('public')
                 ->prunable()
             ,
-                                                                Text::make( 'Address',  'address')
-->rules('required')
-->sortable()
-,
-                                                                Text::make( 'City',  'city')
-->rules('required')
-->sortable()
-,
-                                                                Text::make( 'State',  'state')
-->rules('required')
-->sortable()
-,
-                                                                Text::make( 'Zip Code',  'zip_code')
-->rules('required')
-->sortable()
-,
+            Text::make( 'Address',  'address')
+                ->rules('required')
+                ->sortable()
+            ,
+            Text::make( 'City',  'city')
+                ->rules('required')
+                ->sortable()
+            ,
+            Text::make( 'State',  'state')
+                ->rules('required')
+                ->sortable()
+            ,
+            Text::make( 'Zip Code',  'zip_code')
+                ->rules('required')
+                ->sortable()
+            ,
 
             HasMany::make('Users'),
             HasMany::make('Meetings'),
