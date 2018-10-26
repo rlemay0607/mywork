@@ -65,7 +65,7 @@ class Todo extends Resource
                     'Cancell' => 'Cancell',
                 ])
             ,
-            Textarea::make('Notes'),
+            Froala::make('Notes')->withFiles('public')->showOnIndex(),
             BelongsTo::make('Meeting')
                 ->rules('required')
                 ->searchable()
