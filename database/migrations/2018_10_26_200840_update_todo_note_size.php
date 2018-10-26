@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateTodoAddNote extends Migration
+class UpdateTodoNoteSize extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class UpdateTodoAddNote extends Migration
     public function up()
     {
         Schema::table('todos', function ($table) {
-            $table->string('notes', 100000)->nullable();
+            $table->string('notes', 100000)->change();
 
         });
     }
