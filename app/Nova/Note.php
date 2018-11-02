@@ -102,6 +102,7 @@ class Note extends Resource
     {
         return [
             new Actions\CreateToDo(),
+            new Actions\CreateRequirement(),
         ];
     }
 }
