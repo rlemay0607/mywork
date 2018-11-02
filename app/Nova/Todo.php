@@ -62,7 +62,7 @@ class Todo extends Resource
                     'Work In Progress' => 'Work In Progress',
                     'On-Hold' => 'On-Hold',
                     'Closed' => 'Closed',
-                    'Cancell' => 'Cancell',
+                    'Cancel' => 'Cancel',
                 ])
             ,
             Froala::make('Notes')->withFiles('public')->showOnIndex(),

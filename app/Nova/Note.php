@@ -45,6 +45,14 @@ class Note extends Resource
         return [
             ID::make()->sortable(),
             BelongsTo::make('Meeting')->rules('required')->searchable(),
+            Select::make( 'Status',  'status')
+                ->sortable()
+                ->options([
+                    'Note' => 'Note',
+                    'Convert to Todo' => 'Convert to Todo',
+                    'convert to Requirement' => 'Convert to Requirement',
+
+                ]),
             Froala::make('Note')->withFiles('public')->showOnIndex(),
 
         ];
