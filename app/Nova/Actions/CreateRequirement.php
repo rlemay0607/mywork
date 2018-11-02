@@ -30,8 +30,8 @@ class CreateRequirement extends Action
             $requirement = Requirement::create([
                 'description'=> $model->note,
                 'short_description' => $model->note,
-                'state' => 'draft',
-                
+                'state' => 'Draft',
+
 
 
             ]);

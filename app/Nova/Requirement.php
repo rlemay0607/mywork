@@ -46,7 +46,7 @@ class Requirement extends Resource
     {
         return [
             ID::make()->sortable()->hideFromIndex()->hideFromDetail()->hideWhenCreating()->hideWhenUpdating(),
-            Text::make('Short Description'),
+            Text::make('Short Description')->asHtml(),
 
             Select::make( 'Type',  'type')
                 ->rules('required')
