@@ -29,7 +29,7 @@ class CreateToDo extends Action
 
             $todo = Todo::create([
                 'description'=> $model->note,
-                'meeting_id' => $model->id,
+                'meeting_id' => '1',
                 'short_description' => $model->note,
                 'status' => 'new',
 
