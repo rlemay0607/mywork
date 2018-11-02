@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Froala\NovaFroalaField\Froala;
+use Laravel\Nova\Fields\Select;
 
 class Note extends Resource
 {
