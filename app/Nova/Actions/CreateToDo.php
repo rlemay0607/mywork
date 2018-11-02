@@ -35,7 +35,12 @@ class CreateToDo extends Action
 
 
             ]);
+
+                $model->status = 'Convert to Todo';
+                $model->save();
+
         }
+
     }
 
     /**
