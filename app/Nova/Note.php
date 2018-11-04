@@ -67,7 +67,10 @@ class Note extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            (new Metrics\NotesPerState)->width('2/3'),
+            (new Metrics\NotesPerDay)->width('1/3'),
+        ];
     }
 
     /**
@@ -78,7 +81,9 @@ class Note extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new Filters\FilterByStatus(),
+        ];
     }
 
     /**
@@ -89,7 +94,9 @@ class Note extends Resource
      */
     public function lenses(Request $request)
     {
-        return [];
+        return [
+
+        ];
     }
 
     /**
