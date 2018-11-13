@@ -1,5 +1,5 @@
 <dropdown-trigger class="h-9 flex items-center" slot-scope="{toggle}" :handle-click="toggle">
-    <img src="{{auth()->user()->avatar }}?size=512" class="rounded-full w-8 h-8 mr-3"/>
+    <img src="{{asset(auth()->user()->avatar )}}?size=512" class="rounded-full w-8 h-8 mr-3"/>
 
     <span class="text-90">
         {{ auth()->user()->name }}
